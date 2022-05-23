@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/ElekenAgency/ReactNativeWheelPicker",
   "dependencies": {
-    "moment": "^2.22.0"
+    "moment": "^2.22.0",
+    "@react-native-picker/picker": "^2.4.1",
+    "@react-native-community/datetimepicker": "^6.1.3"
   }
 }
