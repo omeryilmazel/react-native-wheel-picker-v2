@@ -10,22 +10,22 @@ A simple Wheel Picker for Android (For IOs is used PickerIOS)
 
 ## Installation
 
-`yarn add react-native-wheel-picker-android`
+`yarn add react-native-wheel-picker-v2`
 
 ![](./src/assets/pickerAndroid.gif)
 ![](./src/assets/pickerIos.gif)
 
 ## Automatic Installation
 
-`react-native link react-native-wheel-picker-android`
+`react-native link react-native-wheel-picker-v2`
 
 ## Manual Android Installation
 
 In `android/settings.gradle`
 
 ```
-include ':react-native-wheel-picker-android'
-project(':react-native-wheel-picker-android').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-wheel-picker-android/android')
+include ':react-native-wheel-picker-v2'
+project(':react-native-wheel-picker-v2').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-wheel-picker-v2/android')
 ```
 
 In `android/app/build.gradle`
@@ -33,7 +33,7 @@ In `android/app/build.gradle`
 ```
 dependencies {
     ...
-    compile project(':react-native-wheel-picker-android')
+    compile project(':react-native-wheel-picker-v2')
 }
 ```
 
@@ -53,7 +53,7 @@ import {
   WheelPicker,
   TimePicker,
   DatePicker
-} from "react-native-wheel-picker-android";
+} from "react-native-wheel-picker-v2";
 import React, { Component } from "react";
 import { AppRegistry, StyleSheet, Text, View, Button } from "react-native";
 
