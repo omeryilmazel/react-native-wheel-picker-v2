@@ -4,6 +4,17 @@
  * */
 
  import moment from 'moment'
+ import 'moment/locale/cs';
+ import 'moment/locale/de';
+ import 'moment/locale/es';
+ import 'moment/locale/fr';
+ import 'moment/locale/it';
+ import 'moment/locale/ja';
+ import 'moment/locale/nl';
+ import 'moment/locale/nb';
+ import 'moment/locale/pl';
+ import 'moment/locale/pt';
+ import 'moment/locale/sv';
 
  export const DEFAULT_DATE_PICKER_FORMAT = 'ddd MMM D'
  
@@ -47,7 +58,7 @@
      return nextDate
  }
  
- export function pickerDateArray(date: string, daysCount: number = YEAR, datePickerFormat: string = DEFAULT_DATE_PICKER_FORMAT) {
+ export function pickerDateArray(date: string, daysCount: number = YEAR, datePickerFormat: string = DEFAULT_DATE_PICKER_FORMAT, locale: string = "en") {
      const startDate = date ? new Date(date) : new Date()
      const arr = []
  
@@ -57,19 +68,20 @@
              moment.unix(ithDateFromStartDate).format('MM/DD/YYYY')) {
              //arr.push(TODAY)
              arr.push(
-                    formatDatePicker(ithDateFromStartDate, datePickerFormat)
+                    formatDatePicker(ithDateFromStartDate, datePickerFormat, locale)
                 )
          }
          else {
              arr.push(
-                 formatDatePicker(ithDateFromStartDate, datePickerFormat)
+                 formatDatePicker(ithDateFromStartDate, datePickerFormat, locale)
              )
          }
      }
      return arr
  }
  
- export function formatDatePicker(date: number, format: string) {
+ export function formatDatePicker(date: number, format: string, locale: string) {
+     moment.updateLocale(locale);
      return moment.unix(date).format(format);
  }
  
