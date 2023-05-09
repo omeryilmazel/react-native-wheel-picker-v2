@@ -33,7 +33,8 @@
    hideHours?: boolean,
    hideMinutes?: boolean,
    hideAM?: boolean,
-   format?: string
+   format?: string,
+   locale?: string 
  }
  
  type State = {
@@ -99,6 +100,7 @@
        hideMinutes,
        hideAM,
        format,
+       locale
      } = this.props
      const { initHourInex, initDayInex, initMinuteInex } = this.state
      return (
@@ -106,7 +108,7 @@
          {!hideDate && <WheelPicker
            style={styles.dateWheelPicker}
            {...this.props}
-           data={days || pickerDateArray(startDate, daysCount, format)}
+           data={days || pickerDateArray(startDate, daysCount, format, locale)}
            onItemSelected={this.onDaySelected}
            initPosition={initDayInex}
          />}
