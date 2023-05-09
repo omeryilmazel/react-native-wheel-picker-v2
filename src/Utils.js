@@ -55,7 +55,10 @@
          const ithDateFromStartDate = (Date.parse(startDate) / ONE_SECOND) + (i * ONE_DAY_IN_SECONDS)
          if (moment.unix(Date.parse(new Date()) / ONE_SECOND).format('MM/DD/YYYY') ===
              moment.unix(ithDateFromStartDate).format('MM/DD/YYYY')) {
-             arr.push(TODAY)
+             //arr.push(TODAY)
+             arr.push(
+                    formatDatePicker(ithDateFromStartDate, datePickerFormat)
+                )
          }
          else {
              arr.push(
