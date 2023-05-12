@@ -81,7 +81,7 @@
  }
  
  export function formatDatePicker(date: number, format: string, locale: string) {
-     moment.updateLocale(locale);
+     moment.locale(locale);
      return moment.unix(date).format(format);
  }
  
